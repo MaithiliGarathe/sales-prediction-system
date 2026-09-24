@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sales Prediction System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Main Heading -->
+        <h1>Sales Prediction System</h1>
+
+        <p class="subtitle">
+            Predict sales using Linear Regression
+        </p>
+
+
+        <!-- Input Form -->
+        <div class="form-card">
+
+            <label for="tv">
+                TV Advertising Spend
+            </label>
+
+            <input
+                type="number"
+                id="tv"
+                placeholder="Enter TV spend"
+                step="any"
+            >
+
+
+            <label for="radio">
+                Radio Advertising Spend
+            </label>
+
+            <input
+                type="number"
+                id="radio"
+                placeholder="Enter Radio spend"
+                step="any"
+            >
+
+
+            <label for="newspaper">
+                Newspaper Advertising Spend
+            </label>
+
+            <input
+                type="number"
+                id="newspaper"
+                placeholder="Enter Newspaper spend"
+                step="any"
+            >
+
+
+            <button onclick="predictSales()">
+                Predict Sales
+            </button>
+
+        </div>
+
+
+        <!-- Prediction Result -->
+        <div id="result" class="result-card">
+
+            <h2>Predicted Sales</h2>
+
+            <div id="prediction">
+                --
+            </div>
+
+            <p>
+                Enter advertising values and click Predict Sales.
+            </p>
+
+        </div>
+
+
+        <!-- Model Information -->
+        <div class="info-card">
+
+            <h2>Model Information</h2>
+
+            <p>
+                <strong>Algorithm:</strong>
+                Linear Regression
+            </p>
+
+            <p>
+                <strong>Model Status:</strong>
+                Trained Successfully
+            </p>
+
+            <p>
+                <strong>Features:</strong>
+                TV, Radio, Newspaper
+            </p>
+
+            <p>
+                <strong>Training:</strong>
+                Python + Scikit-learn
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- Trained Model Values -->
+    <script src="coefficients.js"></script>
+
+    <!-- Prediction Logic -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
